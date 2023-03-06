@@ -5,7 +5,6 @@ import Login from './pages/Login';
 import Forgotpassword from './pages/Forgotpassword';
 import Resetpassword from './pages/Resetpassword';
 import MainLayout from './components/MainLayout';
-
 function App() {
   return (
     <Router>
