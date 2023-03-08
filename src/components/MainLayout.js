@@ -14,8 +14,8 @@ import { SiBrandfolder } from "react-icons/si";
 import { MdOutlineAttachMoney } from "react-icons/md";
 import { ImBlog } from "react-icons/im";
 import { FaBloggerB } from "react-icons/fa";
+import { IoMdNotifications } from "react-icons/io";
 import { Outlet } from "react-router-dom";
-
 
 const { Header, Sider, Content } = Layout;
 const MainLayout = () => {
@@ -112,7 +112,7 @@ const MainLayout = () => {
               label: "Blogs",
               children: [
                 {
-                  key: "blog",
+                  key: "add-blog",
                   icon: <ImBlog className="fs-4" />,
                   label: "Add Blog",
                 },
@@ -142,7 +142,8 @@ const MainLayout = () => {
         />
       </Sider>
       <Layout className="site-layout">
-        <Header className="d-flex justify-content-between ps-2 pe-5"
+        <Header
+          className="d-flex justify-content-between ps-2 pe-5"
           style={{
             padding: 0,
             background: colorBgContainer,
@@ -155,10 +156,28 @@ const MainLayout = () => {
               onClick: () => setCollapsed(!collapsed),
             }
           )}
-          <div>
-            <h1>
-              asdasd
-            </h1>
+          <div className="d-flex gap-4 align-items-center">
+            <div className="position-relative">
+              <IoMdNotifications className="fs-4" />
+              <span className="badge bg-warning rounded-circle p-1 position-absolute">
+                3
+              </span>
+            </div>
+            <div className="d-flex gap-3 align-items-center"></div>
+            <div className="d-flex gap-3 align-items-center">
+              <div>
+                <img
+                  width={34}
+                  height={34}
+                  src="https://yt3.ggpht.com/ytc/AL5GRJU6M1vzXXd9ZOMym7pdbWQa6Va874x-c0hMdzxdRaBY6t9w0--7zWwmaClFNRa_=s88-c-k-c0x00ffffff-no-rj-mo"
+                  alt=""
+                ></img>
+              </div>
+              <div>
+                <h5 className="mb-0">User</h5>
+                <p className="mb-0">user@email.com</p>
+              </div>
+            </div>
           </div>
         </Header>
         <Content
@@ -169,10 +188,12 @@ const MainLayout = () => {
             background: colorBgContainer,
           }}
         >
-          <Outlet />
+         <Outlet />
         </Content>
       </Layout>
     </Layout>
   );
 };
 export default MainLayout;
+
+// 1:11:52 / 2:47:45

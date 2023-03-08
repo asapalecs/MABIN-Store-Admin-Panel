@@ -1,6 +1,7 @@
 body{
   font-family: Roboto, sans-serif;
 }
+
 .trigger {
   padding: 0 24px;
   font-size: 18px;
@@ -11,6 +12,11 @@ body{
 
 .trigger:hover {
   color: #1890ff;
+}
+
+
+.ant-layout{
+  min-height: 100vh;
 }
 
 .logo {
@@ -44,10 +50,27 @@ body{
   display: none;
 }
 
+main{
+  height: 80vh;
+  overflow-y: scroll;
+  background-color: transparent !important;
+}
+
 .ant-menu-title-content{
   font-size: 16px;
 }
 
-main{
-  overflow-y: scroll;
+.ant-layout-header h5{
+  line-height: 20px;
+  font-size: 18px;
+}
+
+.ant-layout-header p{
+  line-height: 20px;
+  font-size: 13px;
+}
+
+.ant-layout-header div .badge{
+  top: 16px;
+  right: -5px;
 }
