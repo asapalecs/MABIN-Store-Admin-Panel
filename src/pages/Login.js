@@ -13,7 +13,7 @@ const Login = () => {
         <p className="text-center">Login to your account to continue.</p>
         <form action="">
           <CustomInput type="text" label="Email Address" id="email" />
-          <CustomInput type="text" label="Password" id="pass" />
+          <CustomInput type="password" label="Password" id="pass" />
           <div className="mb-3 text-end">
             <Link to="/forgot-password" className="">
               Forgot Password?
