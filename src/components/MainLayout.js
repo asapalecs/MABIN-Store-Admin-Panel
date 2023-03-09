@@ -1,6 +1,7 @@
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import { Layout, Menu, theme } from "antd";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import {
   AiFillDashboard,
@@ -29,8 +30,8 @@ const MainLayout = () => {
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="logo">
           <h2 className="text-white fs-5 text-center py-3 mb-0">
-            <span className="sm-logo">ARC</span>
-            <span className="lg-logo">Mabin Dashboard</span>
+            <span className="sm-logo">MBN</span>
+            <span className="lg-logo">Mabin Store</span>
           </h2>
         </div>
         <Menu
@@ -163,8 +164,7 @@ const MainLayout = () => {
                 3
               </span>
             </div>
-            <div className="d-flex gap-3 align-items-center"></div>
-            <div className="d-flex gap-3 align-items-center">
+            <div className="d-flex gap-3 align-items-center dropdown">
               <div>
                 <img
                   width={34}
@@ -173,9 +173,35 @@ const MainLayout = () => {
                   alt=""
                 ></img>
               </div>
-              <div>
-                <h5 className="mb-0">User</h5>
-                <p className="mb-0">user@email.com</p>
+              <div
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <h5 className="mb-0">Admin</h5>
+                <p className="mb-0">admin@email.com</p>
+              </div>
+
+              <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <Link>
+                  <a
+                    className="dropdown-item py-1 mb-1"
+                    style={{ height: "auto", lineHeight: "20px" }}
+                    to="/"
+                  >
+                    View Profile
+                  </a>
+                </Link>
+                <Link>
+                  <a
+                    className="dropdown-item py-1 mb-1"
+                    style={{ height: "auto", lineHeight: "20px" }}
+                    to="/"
+                  >
+                    Signout
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -188,7 +214,7 @@ const MainLayout = () => {
             background: colorBgContainer,
           }}
         >
-         <Outlet />
+          <Outlet />
         </Content>
       </Layout>
     </Layout>
