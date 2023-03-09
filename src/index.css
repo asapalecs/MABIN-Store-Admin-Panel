@@ -1,4 +1,5 @@
-body{
+/* Default styles for all screen sizes */
+body {
   font-family: Roboto, sans-serif;
 }
 
@@ -14,8 +15,7 @@ body{
   color: #1890ff;
 }
 
-
-.ant-layout{
+.ant-layout {
   min-height: 100vh;
 }
 
@@ -25,52 +25,106 @@ body{
   height: 64px;
 }
 
-.ant-layout-sider{
+.ant-layout-sider {
   flex: 0 0 250px !important;
   max-width: 250px !important;
   min-width: 250px !important;
   width: 250px !important;
 }
 
-.ant-layout-sider-collapsed{
+.ant-layout-sider-collapsed {
   flex: 0 0 80px !important;
   max-width: 80px !important;
   min-width: 80px !important;
   width: 80px !important;
 }
 
-.sm-logo{
+.sm-logo {
   display: none;
 }
 
-.ant-layout-sider-collapsed .sm-logo{
+.ant-layout-sider-collapsed .sm-logo {
   display: block;
 }
-.ant-layout-sider-collapsed .lg-logo{
+
+.ant-layout-sider-collapsed .lg-logo {
   display: none;
 }
 
-main{
+main {
   height: 80vh;
   overflow-y: scroll;
   background-color: transparent !important;
 }
 
-.ant-menu-title-content{
+.ant-menu-title-content {
   font-size: 16px;
 }
 
-.ant-layout-header h5{
+.ant-layout-header h5 {
   line-height: 20px;
   font-size: 18px;
 }
 
-.ant-layout-header p{
+.ant-layout-header p {
   line-height: 20px;
   font-size: 13px;
 }
 
-.ant-layout-header div .badge{
+.ant-layout-header div .badge {
   top: 16px;
   right: -5px;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .trigger {
+    font-size: 14px;
+    line-height: 48px;
+  }
+
+  .ant-layout-sider {
+    flex: 0 0 200px !important;
+    max-width: 200px !important;
+    min-width: 200px !important;
+    width: 200px !important;
+  }
+
+  .ant-layout-sider-collapsed {
+    flex: 0 0 60px !important;
+    max-width: 60px !important;
+    min-width: 60px !important;
+    width: 60px !important;
+  }
+
+  .sm-logo {
+    display: block;
+  }
+
+  .lg-logo {
+    display: none;
+  }
+
+  main {
+    height: auto;
+  }
+
+  .ant-menu-title-content {
+    font-size: 14px;
+  }
+
+  .ant-layout-header h5 {
+    line-height: 16px;
+    font-size: 16px;
+  }
+
+  .ant-layout-header p {
+    line-height: 16px;
+    font-size: 12px;
+  }
+
+  .ant-layout-header div .badge {
+    top: 12px;
+    right: -3px;
+  }
 }

@@ -8,16 +8,46 @@
   --color-c3d4da: #c3d4da;
 }
 
+/* Responsive breakpoints */
+@media screen and (max-width: 767px) {
+  .title {
+    font-size: 24px;
+  }
+  
+  .sub-title {
+    font-size: 20px;
+  }
+  
+  .desc {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .title {
+    font-size: 26px;
+  }
+  
+  .sub-title {
+    font-size: 22px;
+  }
+  
+  .desc {
+    font-size: 13px;
+  }
+}
+
+/* Relative units for font sizes and dimensions */
 .green {
   color: var(--color-47AD24);
-  font-size: 14px;
-  font-family: Roboto !important;
+  font-size: 1rem;
+  font-family: Roboto, sans-serif;
 }
 
 .red {
   color: var(--color-e52e2e);
-  font-size: 14px;
-  font-family: Roboto !important;
+  font-size: 1rem;
+  font-family: Roboto, sans-serif;
 }
 
 .quill {
@@ -29,18 +59,18 @@
   border-color: var(--color-c3d4da);
 }
 
-.title{
-  font: 28px;
-  font-family: Roboto !important;
+.title {
+  font-size: 2rem;
+  font-family: Roboto, sans-serif;
 }
 
-.sub-title{
-  font: 24px;
-  font-family: Roboto!important;
+.sub-title {
+  font-size: 1.8rem;
+  font-family: Roboto, sans-serif;
 }
 
-.desc{
-  font: 14px;
-  font-family: Roboto!important;
+.desc {
+  font-size: 1rem;
+  font-family: Roboto, sans-serif;
   color: var(--color-828599);
 }
